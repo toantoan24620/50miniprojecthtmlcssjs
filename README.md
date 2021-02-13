@@ -8,7 +8,7 @@
   </tr>
   <tr>
     <td>1</td>
-    <td>Expanding Card</td>
+    <td><a href="https://github.com/toantoan24620/50miniprojecthtmlcssjs/tree/master/Day1_ExpandingCard">Expanding Card</a></td>
     <td><a href="https://toantoan24620.github.io/50miniprojecthtmlcssjs/Day1_ExpandingCard/">Live demo</a></td>
   </tr>
   <tr>
