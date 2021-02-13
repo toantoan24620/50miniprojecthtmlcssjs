@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+*{
+    box-sizing: border-box; /* các phần padding, border, .. sẽ ko ảnh hưởng đến kích thước element */
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    margin:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* 1vh tương đương với 1% chiều dọc của viewport*/
+}
+
+.container{
+    display: flex;
+    width: 90vw; /* 1vw tương đương với 1% chiều ngang của viewport*/
+}
+
+.panel{
+    background-size: auto 100%;
+    background-position-x: center; /* đặt ảnh ở trung tâm theo chiều ngang */
+    background-repeat: no-repeat; /* không lặp lại hình ảnh */ 
+    height: 80vh;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    flex: 0.5; /* flex-grow: 0.5; độ rộng của phần tử chứa trong container sao cho lấp đầy container*/
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in; /* thay đổi giá trị của flex trong tg 0.7s */
+}
+
+.panel h3{
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left:20px;
+    margin: 0;
+    opacity: 0;
+}
+
+.panel.active{
+    flex:5; /* ta để các phần tử active có flex-grow là 5 thì phần tử này sẽ có chiều rộng gấp 10 lần các phần tử khác vì các phần tử đó để 0.5 */
+}
+
+.panel.active h3{
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s; /* thay đổi opacity trong tg 0.3s và delay 0.4s */
+}
+
+@media(max-width: 480px){
+    .container{
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(4),.panel:nth-of-type(5){ /* chọn ra các phần tử thứ 4 và thứ 5 cùng có class là panel */
+        display: none;
+    }
+}

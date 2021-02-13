@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+:root{
+    --left-bg-color: rgb(87,84,236,0.7);
+    --right-bg-color: rgb(43,43,43,0.8);
+    --left-btn-hover-color:rgb(87,84,236,1);
+    --right-btn-hover-color:rgb(28,122,28,1);
+    --hover-width: 75%;
+    --other-width:25%;
+}
+
+*{
+    box-sizing: border-box; /* các phần padding, border, .. sẽ ko ảnh hưởng đến kích thước element */
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    margin:0;
+    height:100vh;
+    overflow: hidden;
+}
+h1{
+    font-size: 3rem;
+    color:white;
+    position: absolute;
+    left:50%; /* cách trái 50% của 1 nửa */
+    top:20%;
+    transform: translateX(-50%);  /* đẩy sang trái 50% của 1/4 vì ở trên đã left 50% nên kích thước chỉ còn là 1/4*/
+    white-space: nowrap; /* dù màn hình có bé lại thì cũng ko xuống dòng*/
+}
+.btn{
+    position: absolute;
+    left:50%; 
+    top:50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #fff;
+    border: #fff solid 0.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1rem;
+    width: 15rem;
+    padding: 1.5rem;
+}
+.split.left .btn:hover{
+    background-color: var(--left-btn-hover-color);
+}
+.split.right .btn:hover{
+    background-color: var(--right-btn-hover-color);
+}
+.container{
+    position: relative;
+    width: 100%;
+    height:100%;
+    background: #333;
+}
+ 
+.split{
+    position: absolute;
+    width: 50%;
+    height:100%;
+    overflow: hidden;
+}
+
+.split.left{
+    left: 0;
+    background: url('nikita-kachanovsky-mwytIca3qNA-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.split.left::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--left-bg-color);
+}
+.split.right{
+    right: 0;
+    background:url('maxresdefault.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.split.right::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--right-bg-color);
+}
+.split.right, .split.left, .split.right::before, .split.left::before{
+    transition: all 1s ease-in-out;
+}
+.hover-left .left{
+    width: var(--hover-width);
+}
+.hover-left .right{
+    width: var(--other-width);
+}
+.hover-right .right{
+    width: var(--hover-width);
+}
+.hover-right .left{
+    width: var(--other-width);
+}
+
+@media(max-width: 800px){
+    h1{
+        font-size: 1.5rem;
+        top: 30%;
+    }
+    .btn{
+        width: 11rem;
+        padding: 1rem;
+    }
+}

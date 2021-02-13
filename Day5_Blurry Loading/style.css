@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+*{
+    box-sizing: border-box; /* các phần padding, border, .. sẽ ko ảnh hưởng đến kích thước element */
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    margin:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bg{
+    background: url('https://images.unsplash.com/photo-1610428126912-079781d737e7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1334&q=80') no-repeat center center/cover;
+    position: absolute;
+    top:-30;
+    left:-30;
+    width: calc(100vw + 60px);
+    height: calc(100vh + 60px);
+    z-index: -1;
+    filter: blur(100px);
+}
+.loading-text{
+    font-size: 50px;
+    color:#fff;
+}
