@@ -7,6 +7,7 @@
     <th>Live Demo</th>
   </tr>
   <tr>
+    <td>1</td>
     <td>Expanding Card</td>
     <td><a href="https://toantoan24620.github.io/50miniprojecthtmlcssjs/Day1_ExpandingCard/">Live demo</a></td>
   </tr>  
