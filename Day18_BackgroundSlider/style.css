@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+*{
+    box-sizing: border-box; /* các phần padding, border, .. sẽ ko ảnh hưởng đến kích thước element */
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    margin:0;
+    display: flex;
+    flex-direction: column; /* Sắp xếp các phần tử theo chiều dọc, từ trên xuống */
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center; /* đặt ảnh vào trung tâm của phần tử*/
+    /* Ảnh lúc này vẫn giữ tối đa khung hình và đc cover toàn mh */
+    transition: 0.5s;
+}
+
+body::before{ /* lớp đen */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
+
+.slider-container{
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    height: 70vh;
+    width: 70vw;
+    position: relative;
+    overflow: hidden; /* Xoá bỏ các phần dư thừa*/
+}
+.slide{ 
+    opacity: 0;
+    height: 100vh;
+    width: 100vw;
+    background-position: center center;
+    background-size: cover;
+    position: absolute;
+    top: -15vh; /* lên trên 15vw vì ở trên slider-container chúng ta chỉ lấy height: 70 vw và nó được căn giữa màn hình do ta dùng flex nên hình này sẽ bị bắt đầu lại từ đầu ( lặp phần tối ), tương tự với bên trái */
+    left: -15vw;
+    /* lùi sang trái 15vw vì ở trên slider-container chúng ta chỉ lấy width: 70 vw nên hình ảnh sẽ bị co lại*/
+    transition: 0.4s ease;
+    z-index: 1;
+}
+.slide.active{
+    opacity: 1;
+}
+.arrow{
+    position: fixed;
+    background-color: transparent;
+    padding: 20px;
+    font-size: 30px;
+    border: 2px solid orange;
+    top: 50%;
+    transform: translateY(-50%);
+    color:#fff;
+    cursor: pointer;
+}
+
+.arrow:focus{
+    outline: 0;
+}
+
+.left-arrow{
+    left:calc(15vw - 65px);
+}
+.right-arrow{
+    right:calc(15vw - 65px);
+}
