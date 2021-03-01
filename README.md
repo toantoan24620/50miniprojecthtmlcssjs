@@ -143,8 +143,8 @@
       </tr>
       <tr>
         <td>28</td>
-        <td><a href="https://github.com/toantoan24620/50miniprojecthtmlcssjs/tree/master/Day28_GithubProfiles"></a></td>
-        <td><a href="https://toantoan24620.github.io/50miniprojecthtmlcssjs/Day28_GithubProfiles/">Github Profiles</a></td>
+        <td><a href="https://github.com/toantoan24620/50miniprojecthtmlcssjs/tree/master/Day28_GithubProfiles">Github Profiles</a></td>
+        <td><a href="https://toantoan24620.github.io/50miniprojecthtmlcssjs/Day28_GithubProfiles/">Live demo</a></td>
       </tr>
       <tr>
         <td>29</td>
