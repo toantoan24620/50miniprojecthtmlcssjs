@@ -13,7 +13,7 @@
   </tr>
   <tr>
     <td>2</td>
-    <td>Progress Steps</td>
+    <td><a href="https://github.com/toantoan24620/50miniprojecthtmlcssjs/tree/master/Day2_ProgressSteps>Progress Steps</a></td>
     <td><a href="https://toantoan24620.github.io/50miniprojecthtmlcssjs/Day2_ProgressSteps/">Live demo</a></td>
   </tr>
   <tr>
