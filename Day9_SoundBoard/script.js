@@ -1,4 +1,4 @@
-const sounds = ['diVeNha','loiNho','1TrieuLike','muoiNam','baiNayChillPhet','lamGiPhaiHot'];
+const sounds = ['diVeNha','loiNho','1TrieuLike','muoiNam','baiNayChillPhet','lamGiPhaiHot','sangxinmin','hetnhac'];
 
 sounds.forEach(sound => {
     const btn = document.createElement('button');
